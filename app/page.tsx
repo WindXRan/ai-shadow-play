@@ -14,20 +14,23 @@ import boardArray from "@/app/constants";
 export default function Home() {
   return (
     <>
-      <Navbar />
-      <div className="relative h-[56.25vw] w-full flex items-center justify-center">
-        <div className="h-full w-[30vw]">
-          <Carousel className="w-full h-full bg-black flex aspect-square items-center justify-center p-6">
-            <CarouselContent>
+      <div className="relative h-[100vh] w-full flex items-center justify-center">
+        <div className="relative h-full w-[30vw]">
+          <Carousel className="relative w-full h-full bg-black flex items-center justify-center p-6">
+            <CarouselContent className="w-full h-full bg-black">
               {boardArray.map((n, index) => (
-                <CarouselItem key={index}>
-                  <div className="p-1">
-                    <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <Image src={n.src} alt="" width="1000" height="1000" />
-                      </CardContent>
-                    </Card>
-                  </div>
+                <CarouselItem className="w-full h-full" key={index}>
+                  <Card>
+                    <CardContent className="h-full flex items-center justify-center p-6 w-full">
+                      <Image
+                        src={n.src}
+                        className="h-full w-full"
+                        alt=""
+                        width={1000}
+                        height={5000}
+                      />
+                    </CardContent>
+                  </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>
