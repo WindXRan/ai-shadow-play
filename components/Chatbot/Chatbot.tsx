@@ -1,8 +1,11 @@
 "use client";
+
+import * as z from "zod";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { formSchema } from "./constants";
 export default function Chatbot() {
-  const form = useForm({
+  const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
       prompt: "",
     },
