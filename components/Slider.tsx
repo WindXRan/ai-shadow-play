@@ -8,10 +8,10 @@ export default function Slider() {
     setIndex((index) => (index === Array.length - 1 ? 0 : index + 1));
   };
   return (
-    <div className="block">
+    <div className="w-full h-full bg-white">
       {Array.map((n, i) => (
         <div
-          className={`transition cursor-pointer ${
+          className={`transition cursor-pointer w-full h-full bg-black ${
             index === i ? "opacity-100" : "hidden"
           }`}
           key={i}
@@ -20,10 +20,10 @@ export default function Slider() {
           }}
         >
           <Image
-            className="relative block w-auto h-auto"
+            className="inline"
             src={`/images/${i + 1}.jpg`}
-            fill
-            objectFit="contain"
+            width={2400}
+            height={1200}
             alt=""
           />
         </div>

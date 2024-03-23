@@ -20,8 +20,12 @@ const Sidebar = ({ className }: Props) => {
         </div>
       </Link>
       <div className="flex flex-col gap-y-2 flex-1">
-        <SidebarItem label="learn" href="/learn" iconSrc="/images/logo.png" />
-        <SidebarItem label="learn" href="/learn" iconSrc="/images/logo.png" />
+        <SidebarItem label="导航" href="/learn" iconSrc="/images/logo.png" />
+        <SidebarItem
+          label="小皮机器人"
+          href="/chatbot"
+          iconSrc="/images/logo.png"
+        />
         <SidebarItem label="learn" href="/learn" iconSrc="/images/logo.png" />
         <SidebarItem label="learn" href="/learn" iconSrc="/images/logo.png" />
       </div>
