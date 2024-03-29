@@ -1,14 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import boardArray from "@/app/constants";
 import Slider from "@/components/Slider";
 

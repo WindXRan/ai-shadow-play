@@ -1,35 +1,30 @@
 "use client";
+import Image from "next/image";
 import React from "react";
-import Header from "../../../components/header";
-import Footer from "../../../components/footer";
-import Slider from "@/components/Slider";
-import Sidebar from "@/components/sidebar";
-import { useRouter, useSearchParams } from "next/navigation";
-import Helper from "@/components/Helper";
+import png from "@/images/11.png";
 type Props = {
   children: React.ReactNode;
 };
 
 export default function Layout({ children }: Props) {
-  const SearchParams = useSearchParams();
-  const search = SearchParams.get("dashboard");
-  console.log(search);
   return (
-    <div className="flex ">
-      {/* <Header /> */}
-      <Sidebar className="h-[100vh] hidden lg:block" />
-      <div className="w-full flex flex-col">
-        <Header />
-        <main className=" flex flex-row flex-1 items-center justify-start">
-          <Helper pathName="1111" />
-          <div className=" w-full h-full bg-[url('/images/11.png')]  bg-no-repeat">
-            <div className="bg-black w-full h-full bg-opacity-50">
-              {children}
-            </div>
+    <div className="flex flex-col">
+      <div className="flex flex-col h-[70vh]">
+        <div className="w-full h-[23.8%] bg-[#917548]"></div>
+        <div className="h-[76.2%] w-full">
+          <div className="relative h-full w-full bg-slate-300">
+            <Image
+              src={"/images/13.png"}
+              alt="11"
+              priority
+              fill
+              className="items-center"
+            ></Image>
           </div>
-        </main>
-        <Footer />
+        </div>
       </div>
+
+      <div className="bg-red-200">{children}</div>
     </div>
   );
 }
